@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bachelorettes in Paradise — Iron Island Designs</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Dancing+Script:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- BRAND COLOR SYSTEM ---------- */
+:root {
+  --seafoam: #8FB8A8;
+  --seafoam-deep: #6B9585;
+  --beige-light: #E8DFC9;
+  --beige-mid: #D4C4A0;
+  --beige-dark: #A08A5F;
+  --sky: #F0E8D2;
+  --ink: #3A3227;
+  --white: #FFFEF9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--sky);
+  color: var(--ink);
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---------- NAV ---------- */
+.nav {
+  background: var(--white);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--beige-mid);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.nav-links a:hover { color: var(--seafoam-deep); }
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* SLOT 1: Hero group photo — full bachelorette group at the beach
+   Bride wearing "Booked, Beached, and Bride" + bridesmaids wearing "Booked, Beached, and Besties"
+   File: assets/images/bachelorettes-hero.jpg
+   Full-bleed hero, orientation as shot */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Overlay to make text readable over photo */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(58, 50, 39, 0.15) 0%,
+    rgba(58, 50, 39, 0.35) 50%,
+    rgba(58, 50, 39, 0.6) 100%
+  );
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 40px;
+  max-width: 900px;
+}
+.hero-label {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: var(--beige-light);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 84px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.hero-title-accent {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--beige-light);
+}
+.hero-subtitle {
+  font-size: 22px;
+  color: var(--white);
+  opacity: 0.95;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.5;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+}
+.hero-launch-tag {
+  display: inline-block;
+  padding: 12px 30px;
+  background: rgba(255, 254, 249, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 254, 249, 0.3);
+  color: var(--white);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ---------- INTRO SECTION ---------- */
+.intro-section {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 0 40px;
+  text-align: center;
+}
+.intro-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 40px;
+}
+.intro-text {
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--ink);
+}
+.intro-text p { margin-bottom: 22px; }
+.frankie-signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  color: var(--seafoam-deep);
+  margin-top: 30px;
+}
+
+/* ---------- WHAT'S COMING SECTION ---------- */
+.whats-coming {
+  background: var(--beige-light);
+  padding: 100px 40px;
+  text-align: center;
+}
+.whats-coming-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  color: var(--ink);
+  margin-bottom: 60px;
+}
+.coming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.coming-item {
+  background: var(--white);
+  padding: 40px 25px;
+  border-radius: 4px;
+  box-shadow: 0 2px 15px rgba(58, 50, 39, 0.06);
+}
+.coming-item-icon {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  color: var(--seafoam-deep);
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-style: italic;
+}
+.coming-item-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+.coming-item-desc {
+  font-size: 14px;
+  color: var(--ink);
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* ---------- EMAIL CAPTURE ---------- */
+.email-section {
+  background: var(--seafoam-deep);
+  padding: 100px 40px;
+  text-align: center;
+  color: var(--white);
+}
+.email-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.email-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.email-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+}
+.email-input {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--white);
+  color: var(--ink);
+}
+.email-input:focus {
+  outline: 2px solid var(--beige-light);
+  outline-offset: 2px;
+}
+.email-submit {
+  padding: 16px 30px;
+  background: var(--ink);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.email-submit:hover {
+  background: var(--beige-dark);
+}
+.email-note {
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+/* ---------- BOTTOM CTA ---------- */
+.bottom-cta {
+  padding: 60px 40px;
+  text-align: center;
+  background: var(--beige-light);
+}
+.bottom-cta-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+.bottom-cta-link {
+  color: var(--seafoam-deep);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--seafoam-deep);
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: var(--ink);
+  color: var(--beige-light);
+  padding: 40px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .hero-title { font-size: 48px; }
+  .hero-subtitle { font-size: 17px; }
+  .email-form { flex-direction: column; }
+  .nav { flex-direction: column; gap: 15px; padding: 15px 20px; }
+  .nav-links a { margin-left: 15px; margin-right: 15px; }
+  .intro-title, .whats-coming-title, .email-title { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <a href="https://ironislanddesigns.com" class="nav-logo">IRON ISLAND DESIGNS</a>
+  <div class="nav-links">
+    <a href="https://ironislanddesigns.com">Home</a>
+    <a href="https://artisans.ironislanddesigns.com">Artisans</a>
+    <a href="/">Bachelorettes</a>
+    <a href="https://ironislanddesigns.com/shop">Shop</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+
+  <!-- SLOT 1: Hero group photo — full bachelorette group at the beach
+       Bride wearing "Booked, Beached, and Bride" + bridesmaids wearing "Booked, Beached, and Besties"
+       File: assets/images/bachelorettes-hero.jpg -->
+  <div class="hero-image">
+    <img src="assets/images/bachelorettes-hero.jpg" alt="Bachelorette group at the beach">
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-label">Coming Fall 2026</div>
+    <h1 class="hero-title">Bachelorettes in <span class="hero-title-accent">Paradise</span></h1>
+    <p class="hero-subtitle">Tees, bags, towels, matching sets — made for the trip you'll never forget.</p>
+    <div class="hero-launch-tag">Get on the early list</div>
+  </div>
+</section>
+
+<!-- ============ INTRO SECTION ============ -->
+<section class="intro-section">
+  <h2 class="intro-title">A Weekend Worth Remembering</h2>
+
+  <div class="intro-text">
+    <p>The bride's weekend is one of one. The plane tickets are booked. The villa's confirmed. The itinerary is a rolling group text of maybes.</p>
+
+    <p>What you wear matters. Not because the internet says so — because photos last forever, and you'll be looking at these ones your whole life.</p>
+
+    <p>We're not trying to be everything for everyone. There are a hundred bachelorette shops out there. What we're doing is different — tees, beach bags, towels, matching sets, curated with love. Ready-to-ship, thoughtfully made, actually beautiful. The stuff you'll wear again long after the weekend.</p>
+
+    <p>Fall 2026. We can't wait to show you.</p>
+
+    <p class="frankie-signature">— Frankie</p>
+  </div>
+</section>
+
+<!-- ============ WHAT'S COMING ============ -->
+<section class="whats-coming">
+  <h2 class="whats-coming-title">What's Coming</h2>
+
+  <div class="coming-grid">
+    <div class="coming-item">
+      <div class="coming-item-icon">T</div>
+      <div class="coming-item-title">Tees</div>
+      <div class="coming-item-desc">For the bride. For the bridesmaids. Universal, ready-to-ship, actually soft.</div>
+    </div>
+
+    <div class="coming-item">
+      <div class="coming-item-icon">B</div>
+      <div class="coming-item-title">Beach Bags</div>
+      <div class="coming-item-desc">Because the sunscreen, the phone, the drink, and the extra tee all need somewhere to go.</div>
+    </div>
+
+    <div class="coming-item">
+      <div class="coming-item-icon">S</div>
+      <div class="coming-item-title">Towels & Sets</div>
+      <div class="coming-item-desc">Matching towels and coordinated sets. Group photos become effortless.</div>
+    </div>
+
+    <div class="coming-item">
+      <div class="coming-item-icon">✦</div>
+      <div class="coming-item-title">Something Special</div>
+      <div class="coming-item-desc">A few surprises we're not ready to talk about yet. Get on the list.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMAIL CAPTURE ============ -->
+<section class="email-section">
+  <h2 class="email-title">Be the first to know</h2>
+  <p class="email-subtitle">Sign up and we'll email you the moment Bachelorettes in Paradise launches. No spam, no filler — just the news when it's ready.</p>
+
+  <!-- Netlify Forms — submissions land in your Netlify dashboard and email you -->
+  <form class="email-form" action="/thank-you.html" method="POST" data-netlify="true" name="bachelorettes-signup">
+    <input type="hidden" name="form-name" value="bachelorettes-signup">
+    <input type="email" name="email" class="email-input" placeholder="Your email address" required>
+    <button type="submit" class="email-submit">Notify Me</button>
+  </form>
+
+  <p class="email-note">We'll only use your email for launch updates.</p>
+</section>
+
+<!-- ============ BOTTOM CTA ============ -->
+<section class="bottom-cta">
+  <p class="bottom-cta-text">Know a bride who'd love this?</p>
+  <a href="mailto:frankie@ironislanddesigns.com?subject=Bachelorettes%20in%20Paradise&body=Hey%20Frankie%20-%20I%20wanted%20to%20share%20this%20with...%20" class="bottom-cta-link">Share with Frankie</a>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <p>© 2026 Iron Island Designs · Bachelorettes in Paradise · frankie@ironislanddesigns.com</p>
+</footer>
+
+</body>
+</html>
