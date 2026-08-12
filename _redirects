@@ -1,0 +1,2 @@
+# Route subdomains to the right HTML files
+https://bachelorettes.ironislanddesigns.com/*    /bachelorettes.html    200!
