@@ -136,11 +136,35 @@ body {
   color: var(--seafoam-deep);
   margin-bottom: 15px;
 }
-.gallery-embed iframe {
-  width: 100%;
-  height: 500px;
-  border: none;
+/* Photos and closing video in "From Their Studio" column */
+.studio-photo {
+  margin-bottom: 4px;
+  overflow: hidden;
   border-radius: 4px;
+}
+.studio-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.studio-video {
+  margin-top: 4px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--beige-light);
+}
+.studio-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.studio-video-caption {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  color: var(--seafoam-deep);
+  text-align: center;
+  padding: 15px 20px;
+  background: var(--white);
 }
 .videos-column {
   display: flex;
@@ -352,10 +376,28 @@ body {
 </section>
 
 <section class="content-grid">
-  <!-- Cruzan Gold's embedded scrolling gallery from cruciangold.com -->
+  <!-- 3 Cruzan Gold photos + Frankie's rum-on-porch closing video -->
   <div class="gallery-embed">
     <div class="gallery-label">From Their Studio</div>
-    <iframe src="https://cruciangold.com" title="Cruzan Gold Gallery"></iframe>
+
+    <div class="studio-photo">
+      <img src="assets/images/cruzan-gold/photo-1.jpg" alt="Cruzan Gold">
+    </div>
+
+    <div class="studio-photo">
+      <img src="assets/images/cruzan-gold/photo-2.jpg" alt="Cruzan Gold">
+    </div>
+
+    <div class="studio-photo">
+      <img src="assets/images/cruzan-gold/photo-3.jpg" alt="Cruzan Gold">
+    </div>
+
+    <div class="studio-video">
+      <video controls controlsList="nodownload" playsinline preload="metadata">
+        <source src="assets/videos/cruzan-gold/rum-on-porch.mp4" type="video/mp4">
+      </video>
+      <div class="studio-video-caption">— Frankie / rum on the porch, dog at her feet</div>
+    </div>
   </div>
 
   <!-- Frankie's 6 videos telling the whole story -->
