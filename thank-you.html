@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're on the list — Iron Island Designs</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Dancing+Script:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --seafoam: #8FB8A8;
+  --seafoam-deep: #6B9585;
+  --beige-light: #E8DFC9;
+  --beige-mid: #D4C4A0;
+  --beige-dark: #A08A5F;
+  --sky: #F0E8D2;
+  --ink: #3A3227;
+  --white: #FFFEF9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--sky);
+  color: var(--ink);
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* NAV */
+.nav {
+  background: var(--white);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--beige-mid);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.nav-links a:hover { color: var(--seafoam-deep); }
+
+/* MAIN CONTENT */
+.thank-you-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+}
+.thank-you-content {
+  max-width: 700px;
+  text-align: center;
+}
+.thank-you-icon {
+  font-family: 'Dancing Script', cursive;
+  font-size: 90px;
+  color: var(--seafoam-deep);
+  line-height: 1;
+  margin-bottom: 30px;
+}
+.thank-you-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+.thank-you-message {
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--ink);
+  margin-bottom: 25px;
+}
+.thank-you-message p { margin-bottom: 20px; }
+.frankie-signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  color: var(--seafoam-deep);
+  margin-top: 40px;
+}
+.frankie-signature-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--beige-dark);
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* ACTION BUTTONS */
+.thank-you-actions {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.action-link-primary {
+  display: inline-block;
+  padding: 16px 45px;
+  background: var(--seafoam-deep);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.action-link-primary:hover { background: var(--seafoam); }
+
+.action-link-secondary {
+  display: inline-block;
+  color: var(--seafoam-deep);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--seafoam-deep);
+  transition: color 0.3s, border-color 0.3s;
+}
+.action-link-secondary:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+/* FOOTER */
+.footer {
+  background: var(--ink);
+  color: var(--beige-light);
+  padding: 40px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .thank-you-title { font-size: 36px; }
+  .thank-you-icon { font-size: 70px; }
+  .thank-you-message { font-size: 16px; }
+  .nav { flex-direction: column; gap: 15px; padding: 15px 20px; }
+  .nav-links a { margin-left: 15px; margin-right: 15px; }
+  .action-link-primary { padding: 14px 30px; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="https://ironislanddesigns.com" class="nav-logo">IRON ISLAND DESIGNS</a>
+  <div class="nav-links">
+    <a href="https://ironislanddesigns.com">Shop</a>
+    <a href="https://artisans.ironislanddesigns.com">Artisans</a>
+    <a href="https://bachelorettes.ironislanddesigns.com">Bachelorettes</a>
+  </div>
+</nav>
+
+<main class="thank-you-section">
+  <div class="thank-you-content">
+    <div class="thank-you-icon">✦</div>
+    <h1 class="thank-you-title">You're on the list.</h1>
+
+    <div class="thank-you-message">
+      <p>Thanks for trusting me with your email — I don't take that lightly.</p>
+
+      <p>Here's what happens now: when Bachelorette Party in Paradise launches, you'll be one of the first to know. Early access, first look at new storyboards, all the good stuff before it goes public.</p>
+
+      <p>No spam. No filler. Just the news when it matters.</p>
+
+      <p>In the meantime, wander around. Meet the artisans we love. See what's coming.</p>
+
+      <p class="frankie-signature">— Frankie</p>
+      <p class="frankie-signature-sub">rum on the porch, dog at her feet</p>
+    </div>
+
+    <div class="thank-you-actions">
+      <a href="https://artisans.ironislanddesigns.com" class="action-link-primary">Meet Island Artisans →</a>
+      <a href="https://ironislanddesigns.com" class="action-link-secondary">Back to Iron Island Designs</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <p>© 2026 Iron Island Designs · Bachelorettes in Paradise · frankie@ironislanddesigns.com</p>
+</footer>
+
+</body>
+</html>
