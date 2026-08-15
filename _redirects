@@ -1,2 +1,5 @@
-# Route subdomains to the right HTML files
+# Let thank-you.html pass through untouched
+https://bachelorettes.ironislanddesigns.com/thank-you.html    /thank-you.html    200
+
+# Root of bachelorettes subdomain serves bachelorettes.html
 https://bachelorettes.ironislanddesigns.com/    /bachelorettes.html    200!
